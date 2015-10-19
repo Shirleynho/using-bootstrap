@@ -1,0 +1,252 @@
+body {
+	font-family: "Roboto", sans-serif; 
+}
+
+.container-fluid {
+	max-width: 1200px;
+}
+
+/*=========== COLORS =========*/
+
+.blue {
+	background-color: blue; 
+	height: 500px;
+}
+
+.red {
+	background-color: red;
+	height: 300px;
+}
+
+.green {
+	background-color: green;
+	height: 600px;
+}
+
+.yellow {
+	background-color: yellow;
+	height: 800px;
+}
+
+/*======== NAV BAR HEADER & DROPDOWN =======*/
+
+.navbar {
+	border-bottom: 1px solid red;
+	height: 65px;
+}
+
+.logo {
+	width: 185px;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.dropdown-menu {
+	background-color: red;
+	border-radius: 0;
+	width: 210px;
+	top: 40px;
+	right: 20px;
+	left: auto;
+	margin-top: 20px;
+	padding: 10px 35px 10px 35px;
+	z-index: 1;
+}
+
+
+nav .dropdown-menu li {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 100;
+	border-top: 1px solid #fff;
+}
+
+.nav .dropdown-header {
+	background-color: #fff;
+	color: red;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+nav .dropdown-menu a {
+	color: #fff;
+}
+
+nav .dropdown-menu a:hover {
+	background-color: #fff;
+	color: red;
+}
+
+.navbar-header .glyphicon {
+	font-size: 25px;
+	color: red;
+}
+
+.navbar-toggle {
+	margin-right: -15px;
+}
+
+.navbar-header button:first-child {
+	margin-right: 5px;
+}
+
+/*==== NAVBAR TOP======*/
+.navbar-top {
+	display: none;
+}
+
+@media only screen and (min-width: 380px) {
+	
+	.navbar-toggle {
+		margin-right: 5px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.navbar-header {
+		width: inherit;
+	}
+
+	.logo {
+		width: 214px;
+		bottom: 0;
+	}
+
+	.dropdown-menu {
+		width: auto;
+		z-index: 1;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	.navbar {
+		height: 100px;
+	}
+
+	.top-bar {
+		background-color: green;
+		height: 24px;
+		border-bottom: 3px solid red;
+	}
+
+
+	.logo {
+		top: 40px;
+	}
+
+	.navbar-links {
+		position: relative;
+		float: right !important;
+		background-color: #fff;
+		border: 0;
+		top: 50px;
+	}
+
+	.navbar-nav > .dropdown-header {
+		display: none;
+	}
+
+	nav .navbar-links a {
+		font-weight: 500;
+		color: red;
+		font-size: 1.3rem; 
+		padding: 0 8%;
+	}
+
+	.dropdown-menu {
+		right: 0;
+		padding: 0;
+	}
+
+	/*======NAVBAR TOP=========*/
+
+	.navbar-top {
+		height: 24px;
+		display: inline-block;
+		position: absolute;
+		color: red;
+		left: 45%;
+		top: -6px;
+		z-index: 10000;
+	}
+
+	.navbar-top li.title {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.glyphicon-globe {
+		font-size: 16px;
+	}
+
+	.glyphicon-triangle-right {
+		font-size: 6px;
+		top: -3px;
+	}
+
+	.navbar-top .dropdown-menu {
+		top: 10px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.navbar-top .dropdown-menu li {
+		padding: 10px;
+	}
+
+	.navbar-top .dropdown-menu li:first-child {
+		border-top: none;
+	}
+
+	.nav-form {
+		border: 0;
+		border-bottom: 1px solid #ccc;
+		color: #ccc;
+	}
+
+	.try-newsweek {
+		display: inline-block;
+		background-color: red;
+		position: relative;
+		color: #fff;
+		padding: 4px 17px;
+		width: 180px;
+	}
+
+	.try-newsweek:before {
+		content: "";
+		position: absolute;
+		left: -17px;	
+		top: 0;
+		border-bottom: 28px inset transparent; 
+		border-right: 17px solid red; 
+	}
+
+	.try-newsweek img {
+		position: absolute;
+		height: 60px;
+		-webkit-transform: rotate(15deg); 
+		   -moz-transform: rotate(15deg); 
+		    -ms-transform: rotate(15deg); 
+		     -o-transform: rotate(15deg);
+	}
+}
+@media only screen and (min-width: 1200px) {
+
+	.logo {
+		width: 100%;
+		top: 15px;
+	}
+
+	.navbar-links {
+		top: 50px;
+	}
+
+	nav .dropdown-menu a {
+		padding: 0 9%;
+	}
+}
+
