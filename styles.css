@@ -1,5 +1,6 @@
 body {
 	font-family: "Roboto", sans-serif; 
+	
 }
 
 .container-fluid {
@@ -28,6 +29,11 @@ body {
 	height: 800px;
 }
 
+.pink {
+	background-color: pink;
+	height: 30px;
+}
+
 /*======== NAV BAR HEADER & DROPDOWN =======*/
 
 .navbar {
@@ -45,8 +51,7 @@ body {
 	background-color: red;
 	border-radius: 0;
 	width: 210px;
-	top: 40px;
-	right: 20px;
+	right: 10px;
 	left: auto;
 	margin-top: 20px;
 	padding: 10px 35px 10px 35px;
@@ -54,14 +59,23 @@ body {
 }
 
 
-nav .dropdown-menu li {
+.dropdown-menu li {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 100;
 	border-top: 1px solid #fff;
 }
 
-.nav .dropdown-header {
+.dropdown-menu li:first-child {
+	border-top: none;
+}
+
+.dropdown .dropdown-menu > li {
+	width: 120px;
+	padding: 10px;
+}
+
+.dropdown-header {
 	background-color: #fff;
 	color: red;
 	font-weight: 700;
@@ -86,19 +100,48 @@ nav .dropdown-menu a:hover {
 	margin-right: -15px;
 }
 
-.navbar-header button:first-child {
-	margin-right: 5px;
+.nav-toggle li {
+	display: inline-block;
 }
 
-/*==== NAVBAR TOP======*/
-.navbar-top {
+.hidden-responsive {
 	display: none;
 }
+
+.login {
+	position: absolute;
+}
+
+
+/*==== NAVBAR TOP======*/
+
+	li.dropdown {
+		position: relative;
+		top: -22px;
+		left: 7px;
+		margin-right: 7px;
+	}
+	
+	.try-newsweek  {
+		display: none;
+	}
+
+/*=====FEATURED ARTICLE=======*/
+	
+	.featured img {
+		width: 100%;
+
+	}
+
 
 @media only screen and (min-width: 380px) {
 	
 	.navbar-toggle {
 		margin-right: 5px;
+	}
+
+	li.dropdown {
+		margin-right: 10px;
 	}
 }
 
@@ -110,31 +153,27 @@ nav .dropdown-menu a:hover {
 
 	.logo {
 		width: 214px;
-		bottom: 0;
 	}
 
 	.dropdown-menu {
 		width: auto;
-		z-index: 1;
 	}
 
 }
 
 @media only screen and (min-width: 992px) {
 
+	.logo {
+		top: 40px;
+	}
+
 	.navbar {
 		height: 100px;
 	}
 
 	.top-bar {
-		background-color: green;
-		height: 24px;
+		height: 28px;
 		border-bottom: 3px solid red;
-	}
-
-
-	.logo {
-		top: 40px;
 	}
 
 	.navbar-links {
@@ -145,7 +184,8 @@ nav .dropdown-menu a:hover {
 		top: 50px;
 	}
 
-	.navbar-nav > .dropdown-header {
+	.navbar-nav > .dropdown-header,
+	.dropdown-menu > .dropdown-header {
 		display: none;
 	}
 
@@ -164,70 +204,92 @@ nav .dropdown-menu a:hover {
 	/*======NAVBAR TOP=========*/
 
 	.navbar-top {
-		height: 24px;
-		display: inline-block;
-		position: absolute;
-		color: red;
-		left: 45%;
-		top: -6px;
-		z-index: 10000;
+		float: right;
 	}
 
-	.navbar-top li.title {
+	.navbar-top ul {
 		display: inline-block;
-		margin-right: 20px;
 	}
 
-	.glyphicon-globe {
+	.hidden-responsive {
+		display: inline-block;	
+	}
+
+	.nav-toggle-header > .glyphicon {
 		font-size: 16px;
 	}
 
-	.glyphicon-triangle-right {
-		font-size: 6px;
+	.nav-toggle-header > .glyphicon-triangle-right {
+		font-size: 8px;
 		top: -3px;
 	}
 
-	.navbar-top .dropdown-menu {
-		top: 10px;
-		padding: 10px;
+	.nav-toggle {
+		position: absolute;
+		left: 40%;
+		top: -1px;
+	}
+
+	.nav-toggle p {
+		color: red;
+	}
+
+	li.dropdown {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 20px;
+		margin-right: 10px;
+	}
+
+	.nav-toggle .dropdown-menu {
+		z-index: 10000;
+		width: 150px;
 		text-align: center;
 	}
 
-	.navbar-top .dropdown-menu li {
-		padding: 10px;
+	.dropdown > .dropdown-menu li {
+		padding: 15px;
 	}
 
-	.navbar-top .dropdown-menu li:first-child {
-		border-top: none;
+	.dropdown > .dropdown-menu li:first-child {
+		border-top: 0;
 	}
 
 	.nav-form {
 		border: 0;
 		border-bottom: 1px solid #ccc;
 		color: #ccc;
+		position: relative;
+		top: -5px;
+		left: -5px;
 	}
 
 	.try-newsweek {
 		display: inline-block;
 		background-color: red;
 		position: relative;
+		top: -5px;
 		color: #fff;
-		padding: 4px 17px;
-		width: 180px;
+		width: 150px;
+		vertical-align: middle;
+		padding: 0 10px 3px 10px;
 	}
 
 	.try-newsweek:before {
 		content: "";
 		position: absolute;
-		left: -17px;	
-		top: 0;
-		border-bottom: 28px inset transparent; 
-		border-right: 17px solid red; 
+		left: -15px;	
+		top: 1px;
+		border-bottom: 32px inset transparent; 
+		border-right: 15px solid red; 
 	}
 
 	.try-newsweek img {
 		position: absolute;
-		height: 60px;
+		top: 3px;
+		right: 0;
+		height: 55px;
 		-webkit-transform: rotate(15deg); 
 		   -moz-transform: rotate(15deg); 
 		    -ms-transform: rotate(15deg); 
@@ -241,12 +303,8 @@ nav .dropdown-menu a:hover {
 		top: 15px;
 	}
 
-	.navbar-links {
-		top: 50px;
-	}
-
 	nav .dropdown-menu a {
-		padding: 0 9%;
+		padding: 0 8%;
 	}
 }
 

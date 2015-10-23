@@ -25,74 +25,77 @@
     <div class="top-bar"></div>
     <nav class="navbar">
       <div class="container-fluid">
-        <!-- TOP OF NAVBAR WITH SEARCH -->
-        <div class="navbar-top">
-          <ul>
-            <!-- GLOBE -->
-            <li class="title globe">
-              <div class="dropdown">
-                <div class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="glyphicon glyphicon-globe"></span>
-                  <span class="glyphicon glyphicon-triangle-right"></span>
-                  <span class="sr-only">Language</span>
-                  <span class="nav-text">US Edition</span>
-                </div>
-                <ul class="dropdown-menu">
-                  <li><a href="#">US</a></li>
-                  <li><a href="#">Europe</a></li>
-                </ul>
-              </div>
-            </li>
-            <!-- SOCIAL -->
-            <li class="title social">
-              <div class="dropdown">
-                <div class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="glyphicon glyphicon-heart"></span>
-                  <span class="glyphicon glyphicon-triangle-right"></span>
-                  <span class="sr-only">Social</span>
-                  <span class="nav-text">Social</span>
-                </div>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Tumblr</a></li>
-                </ul>
-              </div>
-            </li>
-            <!-- SEARCH -->
-            <li class="title search">
-              <form class="navbar-form" role="search">
-                <span class="glyphicon glyphicon-search"></span>
-                <span class="glyphicon glyphicon-triangle-right"></span>
-                <input type="text" class="nav-form" placeholder="Search for News">
-              </form>
-            </li>
-            <li class="try-newsweek">Try Newsweek <span class="glyphicon glyphicon-triangle-right"></span>
-              <img src= img/try-newsweek.jpg>
-            </li>
-
-
-          </ul>
-
-      </div> 
 
         <div class="navbar-header">
           <!-- ARTICLE SECTION DROPDOWN -->
-          <a href="#" class="dropdown-toggle" data-target="dropdown">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-links">
-            <span class="sr-only">Toggle Navigation</span>          
-            <span class="glyphicon glyphicon-collapse-down"></span>
-          </button>
-        </a>
-        <!-- SEARCH DROPDOWN -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-form">
-            <span class="sr-only">Search</span>
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-          <!-- EDITION DROPDOWN -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-collapse">
-            <span class="sr-only">Edition</span>
-            <span class="glyphicon glyphicon-globe"></span>
-          </button>
+          <ul class="nav-toggle pull-right">
+            <li class="dropdown">
+<!--               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-globe">
+                  <span class="sr-only">Edition</span>
+                  <span class="glyphicon glyphicon-globe"></span>
+                </button>
+              </a> -->
+              <div class="dropdown-toggle" data-toggle="dropdown">
+                <span class="sr-only">Edition</span>
+                <div class="nav-toggle-header">
+                  <span class="glyphicon glyphicon-globe"></span>
+                  <span class="glyphicon glyphicon-triangle-right hidden-responsive"></span>
+                  <p class="hidden-responsive">US Edition</p>
+                </div>
+              </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">U.S.</a></li>
+                  <li><a href="#">Europe</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown-toggle hidden-responsive" data-toggle="dropdown">
+                <span class="sr-only">Social</span>
+                <div class="nav-toggle-header">
+                  <span class="glyphicon glyphicon-heart"></span>
+                  <span class="glyphicon glyphicon-triangle-right"></span>
+                  <p class="hidden-responsive">Social</p>
+                </div>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Tumblr</a></li>              
+              </ul>
+
+            <li class="dropdown">
+              <div class="dropdown-toggle" data-toggle="dropdown">
+                <span class="sr-only">Search</span>
+                <div class="nav-toggle-header">
+                  <span class="glyphicon glyphicon-search"></span>
+                  <span class="glyphicon glyphicon-triangle-right hidden-responsive"></span>
+                  <form class="hidden-responsive navbar-form" role="search">
+                      <input type="text" class="nav-form" placeholder="Search for News">
+                    </form>
+                </div>
+              </div>
+                <form class="dropdown-menu navbar-form hidden-md hidden-lg" role="search">
+                    <input type="text" class="nav-form" placeholder="Search for News">
+                  </form>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-links">
+                  <span class="sr-only">Toggle Navigation</span>   
+                  <span class="glyphicon glyphicon-collapse-down"></span>
+                </button>
+              </a>
+            </li>
+
+            <li>
+              <div class="try-newsweek">
+              <span class="title">Try Newsweek</span>
+              <span class="glyphicon glyphicon-triangle-right"></span>
+              <img src= img/try-newsweek.jpg>
+            </div>
+            </li>
+          </ul>
+
           <!-- NEWSWEEK LOGO -->
           <div class="logo-wrapper">
             <a class="navbar-brand" href="#">
@@ -100,7 +103,8 @@
             </a>
           </div>
         </div>
-         
+
+        <!-- SECTIONS NAVBAR -->
         <div class="navbar-collapse collapse navbar-links dropdown-menu">
           <ul class="nav navbar-nav">
             <li class="dropdown-header">Sections</li>
@@ -117,17 +121,23 @@
           </ul>
         </div>
 
+      <div class="login pink col-xs-12 hidden-md hidden-lg">
+        <p>Hello</p>
+      </div>
 
       </div>
     </nav>
 
 
-    <div class="container-fluid">
+    <div class="container-fluid clearfix">
       <!-- MAIN ARTICLE FEED -->
       <div class="row">
-        <div class="yellow col-md-9">
+        <div class="featured yellow col-md-9">
           <!-- FEATURED ARTICLE -->
-          <div class="yellow col-xs-12">HI</div>
+          <div class="yellow col-xs-12">
+            <img src="img/featured.jpg">
+
+          </div>
           <div class="row">
             <!-- LEFT NEWS FEED -->
             <div class="green col-sm-3 hidden-xs"></div>
